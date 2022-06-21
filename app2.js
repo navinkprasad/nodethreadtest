@@ -23,7 +23,6 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
  
   app.get("/", (req, res) => {
-    os.platform
     res.send(`Hello World! app2  totalCPU-${totalCPUs} , plateform : ${os.platform}`);
   });
  
