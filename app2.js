@@ -1,6 +1,7 @@
 const express = require("express");
 const PORT = process.env.PORT || 5000
 const cluster = require("cluster");
+const os=require('os')
 const totalCPUs = require("os").cpus().length;
  
 if (cluster.isMaster) {
@@ -22,7 +23,8 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
  
   app.get("/", (req, res) => {
-    res.send(`Hello World! app2  totalCPU-${totalCPUs}`);
+    os.platform
+    res.send(`Hello World! app2  totalCPU-${totalCPUs} , plateform : ${os.platform}`);
   });
  
   app.get("/api/:n", function (req, res) {
