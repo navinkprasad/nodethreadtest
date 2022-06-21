@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 3000;
+const PORT = process.env.PORT || 5000
 const cluster = require("cluster");
 const totalCPUs = require("os").cpus().length;
  
@@ -39,7 +39,7 @@ if (cluster.isMaster) {
     res.send(`Final count is ${count}`);
   });
  
-  app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
   });
 }
