@@ -22,7 +22,7 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
  
   app.get("/", (req, res) => {
-    res.send("Hello World! app2");
+    res.send(`Hello World! app2  totalCPU-${totalCPUs}`);
   });
  
   app.get("/api/:n", function (req, res) {
