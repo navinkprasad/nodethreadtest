@@ -2,9 +2,9 @@
   "name": "exp",
   "version": "1.0.0",
   "description": "",
-  "main": "app1.js",
+  "main": "app2.js",
   "scripts": {
-    "start": "node app1.js",
+    "start": "node app2.js",
     "test": "node app2.js"
   },
   "keywords": [],
